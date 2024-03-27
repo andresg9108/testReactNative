@@ -1,68 +1,37 @@
-import Constants from 'expo-constants';
-
+import {
+    SafeAreaView, // Para que se muestre correctamente en todos los dispositivos
+    ScrollView, // Es un View al que se le puede hacer scroll
+    View, // Son los DIV de React Native
+    Text // Permite cargar textos
+} from 'react-native'
 import { 
-  StatusBar 
-} from 'expo-status-bar';
+  mainViewStyles 
+} from './mainStyles.js'
+import Menu from './components/Menu/Menu'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
+import Content from './components/Content/Content'
+import Users from './components/Users/Users'
+import { useState } from 'react'
 
-import { 
-  StyleSheet, 
-  SafeAreaView, 
-  ScrollView, 
-  View, 
-  Text 
-} from 'react-native';
 
-import Users from './general/Users/Users';
 
-const App = () => (
-  <SafeAreaView style={styles.maincontainer}>
-    <StatusBar />
 
-    <View style={styles.headerandfooter}>
-      <Text style={styles.headerandfooterText}>Header</Text>
-    </View>
-    <View style={styles.container}>
-      <ScrollView>
-        <Text style={styles.containerText}>{'\n'}My first program{'\n'}</Text>
-        <Users />
-      </ScrollView>
-    </View>
-    <View style={styles.headerandfooter}>
-      <Text style={styles.headerandfooterText}>Footer</Text>
-    </View>
-  </SafeAreaView>
-);
+const App = () => {
+    const [loadMenu, setLoadMenu] = useState(false)
 
-export default App;
+    return(
+        <SafeAreaView style={mainViewStyles}>
+          <Header 
+              setLoadMenu={setLoadMenu} 
+          />
+          <Content />
+          <Footer />
+          <Menu 
+              loadMenu={loadMenu} 
+          />
+        </SafeAreaView>
+    )
+}
 
-const styles = StyleSheet.create({
-  maincontainer: {
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: '#000',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    alignContent: 'flex-start',
-    marginTop: Constants.statusBarHeight
-  },
-  headerandfooter: {
-    width: '100%', 
-    backgroundColor: '#808080', 
-    justifyContent: 'center',
-    alignItems: 'center',
-    alignContent: 'center' 
-  },
-  headerandfooterText: {
-    color: '#fff', 
-    fontSize: 25 
-  },
-  container: {
-    flex: 1,
-    width: '100%',
-    backgroundColor: '#000'
-  },
-  containerText: {
-    fontSize: 25, 
-    color: '#fff' 
-  }
-});
+export default App

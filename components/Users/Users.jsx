@@ -1,24 +1,30 @@
 import { 
   useState, 
   useEffect 
-} from 'react';
+} from 'react'
 
 import { 
   StyleSheet, 
   View, 
   Text 
-} from 'react-native';
+} from 'react-native'
+
+
+
+
+
+
 
 const Users = () => {
-	const [users, setUsers] = useState([]);
+	const [users, setUsers] = useState([])
 
 	useEffect(() => {
 		fetch('https://jsonplaceholder.typicode.com/users')
-		.then((oResponse) => { return oResponse.json(); })
+		.then((oResponse) => { return oResponse.json() })
 		.then((oResponse) => {
-			setUsers(oResponse);
-		});
-	}, []);
+			setUsers(oResponse)
+		})
+	}, [])
 
 	return(
 		<View style={styles.items}>
@@ -50,10 +56,10 @@ const Users = () => {
 
       <Text>{'\n'}</Text>
 		</View>
-	);
-};
+	)
+}
 
-export default Users;
+export default Users
 
 const styles = StyleSheet.create({
   items: {
@@ -94,4 +100,4 @@ const styles = StyleSheet.create({
   	fontSize: 15,
   	color: '#fff'
   }
-});
+})

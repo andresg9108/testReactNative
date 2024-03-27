@@ -2,10 +2,10 @@
   "expo": {
     "name": "testReactNative",
     "slug": "testReactNative",
-    "version": "0.1.0",
-    "orientation": "portrait",
+    "version": "1.0.0",
+    "orientation": "default", // portrait
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
