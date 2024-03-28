@@ -6,7 +6,8 @@ import {
 import { 
   StyleSheet, 
   View, 
-  Text 
+  Text, 
+  ScrollView 
 } from 'react-native'
 
 
@@ -27,35 +28,37 @@ const Users = () => {
 	}, [])
 
 	return(
-		<View style={styles.items}>
-			<View style={styles.item}>
-    		<Text style={styles.itemTitle}>Andrés González</Text>
-    		<View style={styles.detail}>
-    			<Text style={styles.textDetail}>Test#1</Text>
-    			<Text style={styles.textDetail}>{' - '}andres.gonzalez@example.com</Text>
-    		</View>
-    	</View>
-    	<View style={styles.item}>
-    		<Text style={styles.itemTitle}>Oscar</Text>
-    		<View style={styles.detail}>
-    			<Text style={styles.textDetail}>Test#2</Text>
-    			<Text style={styles.textDetail}>{' - '}oscar@example.com</Text>
-    		</View>
-    	</View>
-			{
-        users.map(item => (
-        	<View key={item.id} style={styles.item}>
-        		<Text style={styles.itemTitle}>{item.name}</Text>
-        		<View style={styles.detail}>
-        			<Text style={styles.textDetail}>{item.id}</Text>
-        			<Text style={styles.textDetail}>{' - '}{item.email}</Text>
-        		</View>
-        	</View>
-        ))
-      }
+    <ScrollView>
+    		<View style={styles.items}>
+      			<View style={styles.item}>
+          		<Text style={styles.itemTitle}>Andrés González</Text>
+          		<View style={styles.detail}>
+          			<Text style={styles.textDetail}>Test#1</Text>
+          			<Text style={styles.textDetail}>{' - '}andres.gonzalez@example.com</Text>
+          		</View>
+          	</View>
+          	<View style={styles.item}>
+          		<Text style={styles.itemTitle}>Oscar</Text>
+          		<View style={styles.detail}>
+          			<Text style={styles.textDetail}>Test#2</Text>
+          			<Text style={styles.textDetail}>{' - '}oscar@example.com</Text>
+          		</View>
+          	</View>
+      			{
+              users.map(item => (
+              	<View key={item.id} style={styles.item}>
+              		<Text style={styles.itemTitle}>{item.name}</Text>
+              		<View style={styles.detail}>
+              			<Text style={styles.textDetail}>{item.id}</Text>
+              			<Text style={styles.textDetail}>{' - '}{item.email}</Text>
+              		</View>
+              	</View>
+              ))
+            }
 
-      <Text>{'\n'}</Text>
-		</View>
+            <Text>{'\n'}</Text>
+    		</View>
+    </ScrollView>
 	)
 }
 

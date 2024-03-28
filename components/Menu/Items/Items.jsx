@@ -20,6 +20,12 @@ const Items = props => (
 			setPage={props.setPage} 
 		/>
 		<Item 
+			path={'mywebview'} 
+			name={'My WebView'} 
+			setActiveMenu={props.setActiveMenu} 
+			setPage={props.setPage} 
+		/>
+		<Item 
 			path={'users'} 
 			name={'Users'} 
 			setActiveMenu={props.setActiveMenu} 
