@@ -16,8 +16,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         alignContent: 'center',
-        paddingVertical: 30,
-        paddingHorizontal: 30
+        paddingVertical: 10 
     },
      titleText: {
         color: colorPalette.textColor1, 

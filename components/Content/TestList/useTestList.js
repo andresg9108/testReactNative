@@ -25,7 +25,7 @@ const useTestList = () => {
     	})
     }, [])
 
-    return [users]
+    return [{}, users]
 }
 
 export default useTestList

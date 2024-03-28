@@ -1,6 +1,9 @@
 import {
     StyleSheet
 } from 'react-native'
+import {
+    colorPalette 
+} from '../../mainStyles'
 
 
 
@@ -9,11 +12,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         width: '100%',
-        backgroundColor: '#000'
-    },
-    containerText: {
-        fontSize: 25,
-        color: '#fff'
+        backgroundColor: colorPalette.color1 
     }
 })
 

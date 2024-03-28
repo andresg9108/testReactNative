@@ -6,6 +6,8 @@ import HelloWorld from './HelloWorld/HelloWorld'
 import MyWebView from './MyWebView/MyWebView'
 import TestList from './TestList/TestList'
 import useTestList from './TestList/useTestList'
+import TestListFlatList from './TestListFlatList/TestListFlatList'
+import useTestListFlatList from './TestListFlatList/useTestListFlatList'
 
 
 
@@ -13,7 +15,8 @@ import useTestList from './TestList/useTestList'
 
 
 const Content = props => {
-    const [users] = useTestList()
+    const [{}, users] = useTestList()
+    const [{}, dogs] = useTestListFlatList()
 
     switch (props.page) {
       case 'mywebview':
@@ -27,6 +30,14 @@ const Content = props => {
             <View style={styles.container}>
                 <TestList 
                     users={users} 
+                />
+            </View>
+        )
+      case 'testlist-flatlist':
+        return(
+            <View style={styles.container}>
+                <TestListFlatList 
+                    dogs={dogs} 
                 />
             </View>
         )

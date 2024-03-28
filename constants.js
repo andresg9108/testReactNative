@@ -10,5 +10,9 @@ export const menuItems = [
 	{
 		name: 'Test List', 
 		path: 'testlist' 
+	},
+	{
+		name: 'Test List (FlatList)', 
+		path: 'testlist-flatlist' 
 	}
 ]
