@@ -2,9 +2,10 @@ import {
     View 
 } from 'react-native'
 import styles from './styles'
-import Users from '../Users/Users'
 import HelloWorld from './HelloWorld/HelloWorld'
 import MyWebView from './MyWebView/MyWebView'
+import TestList from './TestList/TestList'
+import useTestList from './TestList/useTestList'
 
 
 
@@ -12,6 +13,8 @@ import MyWebView from './MyWebView/MyWebView'
 
 
 const Content = props => {
+    const [users] = useTestList()
+
     switch (props.page) {
       case 'mywebview':
         return(
@@ -19,10 +22,12 @@ const Content = props => {
                 <MyWebView />
             </View>
         )
-      case 'users':
+      case 'testlist':
         return(
             <View style={styles.container}>
-                <Users />
+                <TestList 
+                    users={users} 
+                />
             </View>
         )
       default:

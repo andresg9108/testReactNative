@@ -13,7 +13,6 @@ import useMenu from './components/Menu/useMenu'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Content from './components/Content/Content'
-import Users from './components/Users/Users'
 
 
 

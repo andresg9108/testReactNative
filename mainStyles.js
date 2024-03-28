@@ -8,6 +8,7 @@ export const fontSize = 15
 export const colorPalette = {
     color1: '#000',
     color2: '#606060',
+    color3: '#303030',
     textColor1: '#fff'
 }
 
