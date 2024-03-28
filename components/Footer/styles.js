@@ -1,4 +1,9 @@
 import {
+    fontSize,
+    padding,
+    colorPalette
+} from '../../mainStyles.js'
+import {
     StyleSheet
 } from 'react-native'
 
@@ -6,16 +11,17 @@ import {
 
 
 const styles = StyleSheet.create({
-    headerandfooter: {
+    content: {
         width: '100%',
-        backgroundColor: '#808080',
+        backgroundColor: colorPalette.color2,
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         alignContent: 'center'
     },
-    headerandfooterText: {
-        color: '#fff',
-        fontSize: 25
+    text: {
+        color: colorPalette.textColor1,
+        fontSize: fontSize * 1.5
     }
 })
 

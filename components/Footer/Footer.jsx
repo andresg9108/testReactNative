@@ -5,8 +5,8 @@ import {
 import styles from './styles'
 
 const Footer = () => (
-	<View style={styles.headerandfooter}>
-      <Text style={styles.headerandfooterText}>
+	<View style={styles.content}>
+      <Text style={styles.text}>
         Footer
       </Text>
     </View>

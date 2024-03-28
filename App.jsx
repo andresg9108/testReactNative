@@ -4,32 +4,41 @@ import {
     View, // Son los DIV de React Native
     Text // Permite cargar textos
 } from 'react-native'
+import { useState } from 'react'
 import { 
   mainViewStyles 
 } from './mainStyles.js'
 import Menu from './components/Menu/Menu'
+import useMenu from './components/Menu/useMenu'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Content from './components/Content/Content'
 import Users from './components/Users/Users'
-import { useState } from 'react'
 
 
 
 
 const App = () => {
-    const [loadMenu, setLoadMenu] = useState(false)
+    const [page, setPage] = useState('')
+    const [{
+        setActive: setActiveMenu 
+    }, menuWidth, menuTranslateX] = useMenu()
 
     return(
         <SafeAreaView style={mainViewStyles}>
-          <Header 
-              setLoadMenu={setLoadMenu} 
-          />
-          <Content />
-          <Footer />
-          <Menu 
-              loadMenu={loadMenu} 
-          />
+            <Header 
+                setActiveMenu={setActiveMenu} 
+            />
+            <Content 
+                page={page} 
+            />
+            <Footer />
+            <Menu 
+                menuWidth={menuWidth} 
+                menuTranslateX={menuTranslateX} 
+                setActiveMenu={setActiveMenu} 
+                setPage={setPage} 
+            />
         </SafeAreaView>
     )
 }

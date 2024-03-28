@@ -1,24 +1,26 @@
 import {
     ScrollView, 
-    View, 
-    Text 
+    View 
 } from 'react-native'
 import styles from './styles'
 import Users from '../Users/Users'
+import HelloWorld from './HelloWorld/HelloWorld'
 
 
 
 
 
 
-const Content = () => (
+const Content = props => (
 	<View style={styles.container}>
       <ScrollView>
-        <Text style={styles.containerText}>
-          {'\n'}My first program{'\n'}
-        </Text>
-
-        <Users />
+        {
+            props.page === 'users' ? (
+                <Users />
+            ) : (
+                <HelloWorld />
+            )
+        }
       </ScrollView>
     </View>
 )

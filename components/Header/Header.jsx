@@ -11,7 +11,7 @@ import styles from './styles'
 
 const Header = props => (
 	<View style={styles.content}>
-      <TouchableWithoutFeedback onPress={() => props.setLoadMenu(prev => !prev)}>
+      <TouchableWithoutFeedback onPress={() => props.setActiveMenu(prev => !prev)}>
           <Image 
               style={styles.iconImage} 
               source={require('../../assets/menu.png')}
@@ -19,7 +19,7 @@ const Header = props => (
       </TouchableWithoutFeedback>
       <View style={styles.title}>
           <Text style={styles.titleText}>
-              Header
+              Test
           </Text>
       </View>
       <Image 
