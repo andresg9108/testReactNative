@@ -12,7 +12,7 @@ const TestListFlatList = props => {
 
 	return(
 		<>
-			<Title>
+			<Title blue >
 				Test List (FlatList)
 			</Title>
 			<FlatList 

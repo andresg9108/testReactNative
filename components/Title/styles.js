@@ -10,7 +10,7 @@ import {
 
 
 const styles = StyleSheet.create({
-    title: {
+    content: {
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'center',
@@ -18,9 +18,16 @@ const styles = StyleSheet.create({
         alignContent: 'center',
         paddingVertical: 10 
     },
-     titleText: {
+    text: {
         color: colorPalette.textColor1, 
-        fontSize: fontSize*2
+        fontSize: fontSize*2, 
+        fontWeight: 'bold' 
+    },
+    textRed: {
+        color: '#ff0000' 
+    },
+    textBlue: {
+        color: '#5555ff' 
     }
 })
 

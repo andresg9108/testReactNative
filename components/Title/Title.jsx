@@ -8,12 +8,24 @@ import styles from './styles'
 
 
 
-const Title = props => (
-	<View style={styles.title}>
-		<Text style={styles.titleText}>
-			{ props.children } 
-		</Text>
-	</View>
-)
+const Title = ({
+	children, 
+	red, 
+	blue 
+}) => {
+	const textStyles = [ 
+		styles.text, 
+		red && styles.textRed, 
+		blue && styles.textBlue 
+	]
+
+	return(
+		<View style={styles.content}>
+			<Text style={textStyles}>
+				{ children } 
+			</Text>
+		</View>
+	)
+}
 
 export default Title

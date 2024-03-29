@@ -12,7 +12,7 @@ import Title from '../../Title/Title'
 
 const TestList = props => (
 	<ScrollView>
-		<Title>
+		<Title red >
 			Test List
 		</Title>
 
