@@ -1,37 +1,36 @@
-import {
-    Animated, 
-    StyleSheet 
-} from 'react-native'
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Animated, StyleSheet } from 'react-native'
 import styles from './styles'
 import Items from './Items/Items'
 import Icons from './Icons/Icons'
 
+const Menu = ({ menuWidth, menuTranslateX, setActiveMenu, setPage }) => {
+  const contentStyles = [
+    styles.content,
+    StyleSheet.create({
+      width: menuWidth,
+      transform: [
+        {
+          translateX: menuTranslateX
+        }
+      ]
+    })
+  ]
 
+  return (
+    <Animated.View style={contentStyles}>
+      <Items setActiveMenu={setActiveMenu} setPage={setPage} />
+      <Icons setActiveMenu={setActiveMenu} />
+    </Animated.View>
+  )
+}
 
-
-
-const Menu = props => {
-	const contentStyles = [
-		styles.content, 
-		StyleSheet.create({
-			width: props.menuWidth, 
-			transform: [{
-		        translateX: props.menuTranslateX 
-		    }]
-		})
-	]
-
-	return(
-		<Animated.View style={contentStyles}>
-			<Items 
-				setActiveMenu={props.setActiveMenu} 
-				setPage={props.setPage} 
-			/>
-			<Icons 
-				setActiveMenu={props.setActiveMenu} 
-			/>
-		</Animated.View>
-	)
+Menu.propTypes = {
+  menuWidth: PropTypes.any.isRequired,
+  menuTranslateX: PropTypes.any.isRequired,
+  setActiveMenu: PropTypes.func.isRequired,
+  setPage: PropTypes.func.isRequired
 }
 
 export default Menu

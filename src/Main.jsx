@@ -8,7 +8,7 @@ import Footer from './components/Footer/Footer'
 import Content from './components/Content/Content'
 
 const Main = () => {
-  const [page, setPage] = useState('')
+  const [page, setPage] = useState('/')
   const [{ setActive: setActiveMenu }, menuWidth, menuTranslateX] = useMenu()
 
   return (
