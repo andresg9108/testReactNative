@@ -20,7 +20,7 @@ const Menu = ({ menuWidth, menuTranslateX, setActiveMenu, setPage }) => {
 
   return (
     <Animated.View style={contentStyles}>
-      <Items setActiveMenu={setActiveMenu} setPage={setPage} />
+      <Items />
       <Icons setActiveMenu={setActiveMenu} />
     </Animated.View>
   )
@@ -29,8 +29,7 @@ const Menu = ({ menuWidth, menuTranslateX, setActiveMenu, setPage }) => {
 Menu.propTypes = {
   menuWidth: PropTypes.any.isRequired,
   menuTranslateX: PropTypes.any.isRequired,
-  setActiveMenu: PropTypes.func.isRequired,
-  setPage: PropTypes.func.isRequired
+  setActiveMenu: PropTypes.func.isRequired
 }
 
 export default Menu

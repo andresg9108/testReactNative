@@ -1,26 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Text, TouchableWithoutFeedback } from 'react-native'
+import { Text, TouchableNativeFeedback } from 'react-native'
+import { Link, useLocation } from 'react-router-native'
 import styles from './styles'
 
-const Item = ({ name, path, setActiveMenu, setPage }) => {
-  const itemClick = path => {
-    setActiveMenu(false)
-    setPage(path)
-  }
+const Item = ({ name, path }) => {
+  const { pathname } = useLocation()
+  const itemStyles = [styles.item, pathname === path && styles.itemActive]
 
   return (
-    <TouchableWithoutFeedback onPress={() => itemClick(path)}>
-      <Text style={styles.item}>{name}</Text>
-    </TouchableWithoutFeedback>
+    <Link to={path} component={TouchableNativeFeedback}>
+      <Text style={itemStyles}>{name}</Text>
+    </Link>
   )
 }
 
 Item.propTypes = {
   name: PropTypes.string.isRequired,
-  path: PropTypes.string.isRequired,
-  setActiveMenu: PropTypes.func.isRequired,
-  setPage: PropTypes.func.isRequired
+  path: PropTypes.string.isRequired
 }
 
 export default Item

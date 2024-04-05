@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { padding, fontSize, colorPalette } from '../../../../mainStyles'
+import { padding, fontSize, colorPalette } from '../../../mainStyles'
 
 const styles = StyleSheet.create({
   container: {

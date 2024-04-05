@@ -8,7 +8,7 @@ const Header = ({ setActiveMenu }) => (
     <TouchableWithoutFeedback onPress={() => setActiveMenu(prev => !prev)}>
       <Image
         style={styles.iconImage}
-        source={require('../../assets/menu.png')}
+        source={require('../../../assets/menu.png')}
       />
     </TouchableWithoutFeedback>
     <View style={styles.title}>
@@ -16,7 +16,7 @@ const Header = ({ setActiveMenu }) => (
     </View>
     <Image
       style={styles.iconImage}
-      source={require('../../assets/favicon.png')}
+      source={require('../../../assets/favicon.png')}
     />
   </View>
 )

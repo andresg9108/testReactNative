@@ -1,18 +1,18 @@
 export const menuItems = [
   {
     name: '¡Hello World!',
-    path: ''
+    path: '/'
   },
   {
     name: 'My WebView',
-    path: 'mywebview'
+    path: '/mywebview'
   },
   {
     name: 'Test List',
-    path: 'testlist'
+    path: '/testlist'
   },
   {
     name: 'Test List (FlatList)',
-    path: 'testlist-flatlist'
+    path: '/testlist-flatlist'
   }
 ]

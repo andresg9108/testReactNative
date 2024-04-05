@@ -1,4 +1,4 @@
-import { fontSize, colorPalette } from '../../../mainStyles.js'
+import { fontSize, colorPalette } from '../../mainStyles.js'
 import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
