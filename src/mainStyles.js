@@ -1,8 +1,13 @@
 import Constants from 'expo-constants'
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Platform } from 'react-native'
 
 export const padding = 10
 export const fontSize = 15
+export const font = Platform.select({
+  android: 'Roboto',
+  ios: 'Arial',
+  default: 'System'
+})
 export const colorPalette = {
   color1: '#000',
   color2: '#606060',
