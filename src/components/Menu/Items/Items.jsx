@@ -3,14 +3,23 @@ import PropTypes from 'prop-types'
 import { View } from 'react-native'
 import styles from './styles'
 import Item from './Item/Item'
-import { menuItems } from '../../../constants'
 
-const Items = () => (
+const Items = ({ routes, setActiveMenu }) => (
   <View style={styles.container}>
-    {menuItems.map((item, index) => (
-      <Item key={index} path={item.path} name={item.name} />
+    {routes.map((route, index) => (
+      <Item
+        key={index}
+        path={route.path}
+        name={route.name}
+        setActiveMenu={setActiveMenu}
+      />
     ))}
   </View>
 )
+
+Items.propTypes = {
+  routes: PropTypes.array.isRequired,
+  setActiveMenu: PropTypes.func.isRequired
+}
 
 export default Items

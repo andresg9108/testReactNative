@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import { fontSize, colorPalette } from '../../mainStyles'
+import { colorPalette } from '../../mainStyles'
 
 const styles = StyleSheet.create({
   content: {
@@ -11,7 +11,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
-    alignContent: 'flex-start'
+    alignContent: 'flex-start',
+    paddingTop: 10
   }
 })
 

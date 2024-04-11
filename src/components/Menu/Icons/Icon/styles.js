@@ -1,20 +1,11 @@
-import {
-    StyleSheet
-} from 'react-native'
-import {
-    fontSize, 
-    colorPalette 
-} from '../../../../mainStyles'
-
-
-
+import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
-    icon: {
-        width: 35, 
-        height: 35, 
-        marginVertical: 5, 
-    }
+  icon: {
+    width: 35,
+    height: 35,
+    marginVertical: 5
+  }
 })
 
 export default styles

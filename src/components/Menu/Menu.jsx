@@ -5,7 +5,7 @@ import styles from './styles'
 import Items from './Items/Items'
 import Icons from './Icons/Icons'
 
-const Menu = ({ menuWidth, menuTranslateX, setActiveMenu, setPage }) => {
+const Menu = ({ routes, menuWidth, menuTranslateX, setActiveMenu }) => {
   const contentStyles = [
     styles.content,
     StyleSheet.create({
@@ -20,13 +20,14 @@ const Menu = ({ menuWidth, menuTranslateX, setActiveMenu, setPage }) => {
 
   return (
     <Animated.View style={contentStyles}>
-      <Items />
+      <Items routes={routes} setActiveMenu={setActiveMenu} />
       <Icons setActiveMenu={setActiveMenu} />
     </Animated.View>
   )
 }
 
 Menu.propTypes = {
+  routes: PropTypes.array.isRequired,
   menuWidth: PropTypes.any.isRequired,
   menuTranslateX: PropTypes.any.isRequired,
   setActiveMenu: PropTypes.func.isRequired

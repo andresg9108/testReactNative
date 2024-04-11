@@ -1,12 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { FlatList, Text } from 'react-native'
-import LayoutMain from '../../layauts/LayoutMain/LayoutMain'
 import Title from '../../components/Title/Title'
 import Item from './Item/Item'
 
 const TestListFlatList = ({ dogs }) => (
-  <LayoutMain>
+  <>
     <Title blue>Test List (FlatList)</Title>
     <FlatList
       data={dogs}
@@ -18,7 +17,7 @@ const TestListFlatList = ({ dogs }) => (
         />
       )}
     />
-  </LayoutMain>
+  </>
 )
 
 TestListFlatList.propTypes = {
