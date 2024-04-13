@@ -4,7 +4,8 @@ const useTestList = () => {
   const [users, setUsers] = useState([])
 
   useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
+    globalThis
+      .fetch('https://jsonplaceholder.typicode.com/users')
       .then(oResponse => {
         if (!oResponse.ok) {
           throw new Error('Connection Error')

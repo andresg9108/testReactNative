@@ -17,7 +17,7 @@ const useMyRoutes = () => {
       {
         name: '¡Hello World!',
         path: '/',
-        element: HelloWorld
+        element: FormsFormik
       },
       {
         name: 'My WebView',
@@ -35,7 +35,7 @@ const useMyRoutes = () => {
         element: () => <TestListFlatList dogs={dogs} />
       },
       {
-        name: 'Forms (Formik)',
+        name: 'Forms(Formik)',
         path: '/forms-formik',
         element: FormsFormik
       }

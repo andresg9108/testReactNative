@@ -4,7 +4,8 @@ const useTestListFlatList = () => {
   const [dogs, setDogs] = useState([])
 
   useEffect(() => {
-    fetch('https://dogapi.dog/api/v2/breeds')
+    globalThis
+      .fetch('https://dogapi.dog/api/v2/breeds')
       .then(oResponse => {
         if (!oResponse.ok) {
           throw new Error('Connection Error')
